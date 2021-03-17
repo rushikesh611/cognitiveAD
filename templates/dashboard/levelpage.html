@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+   <div class="main ">
+   <br>
+       <h3>{{tool.gametype}}</h3>
+    <div class="card w-60">
+        <div class="card-body">
+          <h5 class="card-title">{{tool.titlegame1}}</h5>
+          <p class="card-text">{{tool.descriptiongame1}}</p>
+          <a href="{% url 'reactiontimeone' %}" class="btn btn-primary">LEVEL 1</a>
+          <a href="" class="btn btn-primary">LEVEL 2</a>
+        </div>
+      </div>
+      <div class="card w-60">
+        <div class="card-body">
+          <h5 class="card-title">{{tool.titlegame2}}</h5>
+          <p class="card-text">{{tool.descriptiongame2}}</p>
+          <a href="{% url 'memoryone' %}" class="btn btn-primary">LEVEL 1</a>
+          <a href="#" class="btn btn-primary">LEVEL 2</a>
+        </div>
+      </div>
+   </div>
+{% endblock %}

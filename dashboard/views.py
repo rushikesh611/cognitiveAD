@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from .models import Game
 
 # Create your views here.
 # @login_required(login_url='/authentication/login')
@@ -10,4 +11,23 @@ def index(request):
     return render(request,'dashboard/index.html')
 
 def tools(request):
-    return render(request,'dashboard/tools.html')
+    tools = Game.objects.all()
+    context = { 'tools' : tools }
+    return render(request,'dashboard/tools.html', context)
+
+def levelview(request, gametype):
+    tools = Game.objects.all()
+    tool = Game.objects.filter(gametype = gametype).first()
+    context = { 
+        'tools' : tools,
+        'tool' : tool
+    }
+    return render(request,'dashboard/levelpage.html', context)
+
+def reactiontimeone(request):
+    return render(request,'dashboard/reactiontime1.html')
+
+def memoryone(request):
+    return render(request,'dashboard/memory1.html')
+
+
