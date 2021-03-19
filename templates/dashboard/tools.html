@@ -4,17 +4,28 @@
 <link href="{% static 'css/tools.css' %}" rel="stylesheet">
 
 <div class="main ">
-    <h1 class="text-center">SKILLS TO TEST</h1>
+  <div class='container'>
+    <h1>SKILLS TO TEST</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for t in tools %}
       <div class="col">
         <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"><a href="{% url 'level' gametype=t.gametype %}">{{t.gametype}}</a></h5>            
+          <div class="content">
+            <h5><a href="{% url 'level' gametype=t.gametype %}">{{t.gametype}}</a></h5>            
           </div>
         </div>
       </div>
     {% endfor %}
     </div>
-   </div>
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'js/vanilla-tilt.js' %}"></script>
+<script>
+VanillaTilt.init(document.querySelectorAll(".card"),{
+		max: 25,
+		speed: 400,
+    glare: true,
+    "max-glare":1,
+	});
+</script>
 {% endblock %}

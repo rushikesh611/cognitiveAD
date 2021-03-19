@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block content %}
-
+<link href="{% static 'css/auth.css' %}" rel="stylesheet">
+<div class='container'>
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
@@ -37,12 +38,13 @@
                     </div>
                 </form>
                 <div class="container">
-                    <span class='text-lead lead'>Have an account?</span><a href="{% url 'login' %}">Login</a> 
+                    <span class='text-lead'>Have an account? </span><a href="{% url 'login' %}">Login</a> 
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-4"></div>
+</div>
 </div>
 <script src="{% static 'js/register.js' %}"></script>
 {% endblock content %}
