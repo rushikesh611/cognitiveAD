@@ -1,6 +1,25 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
-    <h1>This is the dashboard page.</h1>
-{% endblock %}
+<link href="{% static 'css/levelpage.css' %}" rel="stylesheet">
 
+   <div class="main ">
+   <div class='container'>
+   <br>
+       <h3>Dashboard</h3>
+    <div class="card w-75">
+        <div class="card-body">
+          <h5 class="card-title">History</h5>
+          <p class="card-text">Game name</p>
+        </div>
+      </div>
+      <br>
+      <div class="card w-75">
+        <div class="card-body">
+          <h5 class="card-title">History</h5>
+          <p class="card-text">Game name</p>
+        </div>
+      </div>
+      </div>
+   </div>
+{% endblock %}

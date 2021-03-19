@@ -32,7 +32,7 @@
         {% if user.is_authenticated %}
           <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
-            <input class="nav-item" type="submit" value='Sign out'/>
+            <button type="submit" class="btn btn-dark">Sign Out</button>
           </form>
         {% else %}
             <a class="nav-item nav-link" href="{% url 'login' %}" class="btn btn-simple" style="color:white;"">Log in</a>
