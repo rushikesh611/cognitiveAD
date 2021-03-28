@@ -1,0 +1,42 @@
+{
+  "name": "cognition-mem",
+  "short_name": "cog-mem",
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#9ad1ea",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/favicon/6.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon/5.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon/3.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+	{
+	  "src": "images/favicon/2.png",
+      "sizes": "72x72",
+      "type": "image/png"
+	},
+	{
+	  "src": "images/favicon/1.png",
+      "sizes": "57x57",
+      "type": "image/png"
+	},
+	{
+	  "src": "images/favicon/4.png",
+      "sizes": "32x32",
+      "type": "image/png"
+	}
+  ],
+  "display": "fullscreen",
+  "orientation": "portrait"
+}

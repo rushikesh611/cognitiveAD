@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <title>Reaction Time</title>
+    <style type="text/css">
+            
+        body {
+            
+            font-family: sans-serif;
+            
+        }
+    
+        #shape {
+            
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+            position: relative;
+            left: 45%;            
+        }
+
+        @media screen and (max-width: 928px){#shape {
+            
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+            position: relative;
+            left: 15%;            
+        }}
+
+        
+        
+        .bold {
+            
+            font-weight: bold;
+            
+        }
+        .main{
+            text-align: center;
+        }
+
+        #ty{
+            text-center;
+            
+        }
+        #bar{
+            width: 100%;
+            height: 5px;
+            background-color: brown;
+        }
+        #border{
+            border-color: darkblue;
+            border-width: 3px;
+            border-style: solid;
+        }
+    
+    </style>
+  </head>
+  <body>
+    <div class="main">  
+    <h1>Test Your Reactions!</h1>
+    <h2>LEVEL - 2</h2>
+        
+    <p>Click on the objects as quickly as you can!</p>
+    
+    <p class="bold">Your time: <span id="timeTaken"></span></p>
+    <div id="border"><div id="bar"></div></div>
+    <p id="ty"></p>
+    
+    <div id="shape"></div>
+</div>
+    
+    <script type="text/javascript">
+        
+        var start = new Date().getTime();
+        var record2 = [];
+        var c = 0;
+            
+        
+        function getRandomColor() {
+            
+            var letters = '0123456789ABCDEF'.split('');
+
+            var color = '#';
+
+            for (var i = 0; i < 6; i++ ) {
+    
+                color += letters[Math.floor(Math.random() * 16)];
+
+            }
+
+            return color;
+
+        }
+        
+        function makeShapeAppear() {
+            
+            var top = Math.random() * 300;
+            
+          
+            
+            var width = (Math.random() * 50) + 30;
+            
+            if (Math.random() > 0.5) {
+                
+                document.getElementById("shape").style.borderRadius = "50%";
+                
+            } else {
+                
+                document.getElementById("shape").style.borderRadius = "0";
+                
+            }
+            
+            document.getElementById("shape").style.backgroundColor = getRandomColor();
+            
+            document.getElementById("shape").style.width = width + "px";
+            
+            document.getElementById("shape").style.height = width + "px";
+            
+            document.getElementById("shape").style.top = top + "px";          
+        
+            document.getElementById("shape").style.display = "block";
+            
+            start = new Date().getTime();
+
+        }
+        
+        function appearAfterDelay() {
+            
+            setTimeout(makeShapeAppear, Math.random() * 2000);
+            
+        }
+        
+        appearAfterDelay();
+        
+        document.getElementById("shape").onclick = function() {
+            
+            document.getElementById("shape").style.display = "none";
+            
+            var end = new Date().getTime();
+            
+            var timeTaken = (end - start) / 1000;
+            
+            document.getElementById("timeTaken").innerHTML = timeTaken + "s";
+
+            record2.push(timeTaken);
+            document.getElementById("bar").style.width = timeTaken * 10 + "rem";
+            c = c + 1;
+
+            if(c==10){
+            document.getElementById("ty").style = "padding: 10%"
+            document.getElementById("ty").innerText = "Thanks  for playing!!"; 
+                return;
+            }
+       
+            appearAfterDelay();
+            
+        }
+        
+        
+    </script>
+  </body>
+{% endblock %}
+
+
+
+
+
+  

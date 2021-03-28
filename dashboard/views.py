@@ -27,7 +27,25 @@ def levelview(request, gametype):
 def reactiontimeone(request):
     return render(request,'dashboard/reactiontime1.html')
 
+def reactiontimetwo(request):
+    return render(request,'dashboard/reactiontime2.html')
+
 def memoryone(request):
     return render(request,'dashboard/memory1.html')
+
+def memorytwo(request):
+    return render(request,'dashboard/memory2.html')
+
+def spatialmemoryone(request):
+    return render(request,'dashboard/spatialmemory1.html')
+
+def pairedalmazeone(request):
+    return render(request,'dashboard/pairedalMaze1.html')
+
+def pairedalmazetwo(request):
+    return render(request,'dashboard/pairedalMaze2.html')
+
+def rapidvisualone(request):
+    return render(request,'dashboard/rapidvisual1.html')
 
 

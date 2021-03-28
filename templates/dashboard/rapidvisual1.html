@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<head>
+  <title>Shades</title>
+  <link href="#" rel="icon">
+  <link rel="stylesheet" href="{% static 'css/rapidvisualone.css' %}">
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49734880-4', 'auto');
+  ga('send', 'pageview');
+</script>
+{% comment %} <div class="qr-code">
+  <img width="150" src="images/qr.png" />
+  <!--1353 f2-->
+  <p>Scan QR Code</p>
+  <p>Play it on your mobile devices</p>
+</div> {% endcomment %}
+<div id="game">
+  <div class="game-title">Shades</div>
+  <div class="gameover-up bg-0">
+    <div class="gameover-title"><p>Game</p><p>Over</p></div>
+    <div class="score bg-2">Score：<span></span></div>
+  </div>
+  <div class="gameover-down bg-0">
+    <div class="best bg-4">Best Score：<span></span></div>
+    <div class="btn btn-playagain color-4">Play Again!</div>
+  </div>
+  <div class="live-score color-0"></div>
+  <div class="level color-0">Level <span></span></div>
+  <div class="btn-pause">
+    <div class="bar bg-0"></div>
+    <div class="bar bg-0"></div>
+  </div>
+  <div class="bg">
+    <div class="lane lane-0" data-lane="0"></div>
+    <div class="lane lane-1" data-lane="1"></div>
+    <div class="lane lane-2" data-lane="2"></div>
+    <div class="lane lane-3" data-lane="3"></div>
+  </div>
+  <div class="menu">
+    <div class="best color-0">Best Score：<span></span></div>
+    <div class="btn-large btn-begin up">
+      <div class="bg-1 content"><p>Start</p></div>
+    </div>
+    <div class="btn-large btn-begin down">
+      <div class="bg-1 content"><p>Game</p></div>
+    </div>
+    <div class="btn-theme color-1">Theme</div>
+    <div class="btn-tutorial color-1">Tutorial</div>
+  </div>
+  <div class="tutorial bg-0">
+    <div class="intro">
+      <p class="text"></p>
+      <div class="btn btn-next"></div>
+    </div>
+  </div>
+  <div class="tutorial__text"></div>
+  <div class="tutorial__success">Perfect！</div>
+  <div class="spot"></div>
+  <div class="pause">
+    <div class="btn-large btn-continue up">
+      <div class="bg-1 content"><p>Continue</p></div>
+    </div>
+    <div class="btn-large btn-continue down">
+      <div class="bg-1 content"><p>Game</p></div>
+    </div>
+    <div class="btn-home bg-1">Start Over</div>
+  </div>
+  <div class="countdown"><div></div></div>
+  <div class="hidden"></div>
+  {% comment %} <div class="ads">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- shades cpfoker1353-->
+    <ins class="adsbygoogle"
+         style="display:block;height:50px;"
+         data-ad-client="ca-pub-1157636439125028"
+         data-ad-slot="4401903395"
+         data-ad-format="auto"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div> {% endcomment %}
+</div>
+<script src="{% static 'js/rapidvisualone.js' %}"></script>
+</body>
+{% endblock %}
+
+
+
+
+
+  
