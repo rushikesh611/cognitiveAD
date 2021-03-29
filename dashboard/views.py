@@ -48,4 +48,11 @@ def pairedalmazetwo(request):
 def rapidvisualone(request):
     return render(request,'dashboard/rapidvisual1.html')
 
+def reactiontwo(request):
+    return render(request,'dashboard/reactiontimeg2.html')
+
+def motorone(request):
+    return render(request,'dashboard/motor1.html')
+
+
 

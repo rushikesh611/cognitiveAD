@@ -15,4 +15,6 @@ urlpatterns = [
     path('pairedalmazeone',views.pairedalmazeone, name='pairedalmazeone'),
     path('pairedalmazetwo',views.pairedalmazetwo, name='pairedalmazetwo'),
     path('rapidvisualone',views.rapidvisualone, name='rapidvisualone'),
+    path('reactiontwo',views.reactiontwo, name='reactiontwo'),
+    path('motorone',views.motorone, name='motorone'),
 ]
